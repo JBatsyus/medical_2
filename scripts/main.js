@@ -116,6 +116,32 @@ window.addEventListener("scroll", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Главный слайдер
+
+    // Инициализация главного слайдера
+    const mainSwiper = new Swiper('.hero-mrt__slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.hero-mrt__arrow--next',
+            prevEl: '.hero-mrt__arrow--prev',
+        },
+    });
+
+    // Инициализация бокового слайдера
+    const sideSwiper = new Swiper('.hero-mrt__side-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.hero-mrt__side-arrow--next',
+            prevEl: '.hero-mrt__side-arrow--prev',
+        },
+    });
+
+
+
+
     // Слайдер ДО/ПОСЛЕ
     var beforeAfterSwiper = new Swiper(".before-after__swiper", {
         loop: true,
