@@ -320,11 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
             loop: true,
             speed: 600,
             slidesPerView: 1.1,
-            spaceBetween: 20,
-            // pagination: {
-            //     el: '.services__pagination',
-            //     clickable: true,
-            // },
+            spaceBetween: 12,
             navigation: {
                 prevEl: ".services__nav--prev",
                 nextEl: ".services__nav--next",
@@ -332,17 +328,21 @@ document.addEventListener("DOMContentLoaded", function () {
             breakpoints: {
                 576: {
                     slidesPerView: 1.5,
-                    spaceBetween: 16,
+                    spaceBetween: 12
                 },
                 768: {
-                    slidesPerView: 2.01,
-                    spaceBetween: 16,
+                    slidesPerView: 2.05,
+                    spaceBetween: 20
                 },
                 992: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
+                    slidesPerView: 2.1,
+                    spaceBetween: 16
                 },
-            },
+                1440: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                }
+            }
         });
     }
 
