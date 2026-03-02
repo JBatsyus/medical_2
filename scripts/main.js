@@ -454,26 +454,26 @@ const doctorsSwiper = new Swiper(".doctors__swiper", {
     loop: true,
     speed: 600,
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: 16,
 
     breakpoints: {
-        480: {
-            slidesPerView: 1.5,
-            spaceBetween: 20,
+        450: {
+            slidesPerView: 1.2,
+
         },
         576: {
             slidesPerView: 1.7,
-            spaceBetween: 20,
+
         },
         768: {
             slidesPerView: 2,
-            spaceBetween: 20,
+
         },
         992: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 16,
         },
-        1200: {
+        1400: {
             slidesPerView: 4,
             spaceBetween: 20,
         },
