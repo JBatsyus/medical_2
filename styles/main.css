@@ -1513,7 +1513,7 @@ a[class] {
   color: var(--blue_black);
   padding: 24px 0 24px 24px;
   z-index: 2;
-  max-width: 205px;
+  max-width: 194px;
 }
 @media (width <= 63.99875rem) {
   .hero__features-title {
