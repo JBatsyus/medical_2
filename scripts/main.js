@@ -159,17 +159,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Слайдер ДО/ПОСЛЕ
-    var beforeAfterSwiper = new Swiper(".before-after__swiper", {
+    var ourWorksSwiper = new Swiper(".our-works__swiper", {
         loop: true,
         speed: 600,
         slidesPerView: 1.2,
         spaceBetween: 16,
-        touchStartPreventDefault: false,
-
-        // Слежение за изменениями DOM и контейнера
-        observer: true,
-        observeParents: true,
-
         breakpoints: {
             576: {
                 slidesPerView: 1.1,
@@ -186,47 +180,23 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
         navigation: {
-            prevEl: ".before-after__nav--prev",
-            nextEl: ".before-after__nav--next",
+            prevEl: ".our-works__nav--prev",
+            nextEl: ".our-works__nav--next",
         },
 
         pagination: {
-            el: ".before-after__pagination",
+            el: ".our-works__pagination",
             dynamicBullets: true,
             clickable: true,
         },
 
-        on: {
-            init: function () {
-                initTwentyTwenty();
-            },
-            // Пересчитываем TwentyTwenty при смене брейкпоинтов и обновлении Swiper
-            resize: function () {
-                $(window).trigger("resize");
-            },
-        },
+
     });
 
-    function initTwentyTwenty() {
-        $(".twentytwenty-container").twentytwenty({
-            default_offset_pct: 0.5,
-            orientation: "horizontal",
-            before_label: "Было",
-            after_label: "Стало",
-            no_overlay: false,
-            move_with_handle_only: true,
-            click_to_move: false,
-        });
-    }
+ 
 
-    // Блокировка Swiper при использовании ползунка
-    $(document).on("mousedown touchstart", ".twentytwenty-handle", function () {
-        beforeAfterSwiper.allowTouchMove = false;
-    });
 
-    $(document).on("mouseup touchend", function () {
-        beforeAfterSwiper.allowTouchMove = true;
-    });
+
 
     // Модальное окно - микромодал. Не фансибокс, тк фансибокс не предназначен для коммерческого использования
 
@@ -572,4 +542,23 @@ const initChoices = () => {
 document.addEventListener("DOMContentLoaded", initChoices);
 $(function () {
     $(".input-phone").mask("+7 (999) 999 - 99 - 99");
+});
+
+Fancybox.bind("[data-fancybox]", {
+    gestures: false,        // ← главное: отключает свайпы/закрытие жестами
+    dragToClose: false,     // ← запрещает закрывать свайпом вниз
+    hideScrollbar: false,   // 
+    compact: false,
+    idle: false,
+    infinite: true,
+    Toolbar: {
+        display: {
+            left: ["infobar"],
+            middle: [],
+            right: ["iterateZoom", "slideshow", "close"],
+        },
+    },
+    Images: {
+        Panzoom: { maxScale: 2 },
+    },
 });
