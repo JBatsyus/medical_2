@@ -84,3 +84,8 @@ html.no-scroll {
         display: none !important;
     }
 }
+.visible-mobile{
+    @include mobile {
+        display: none !important;
+    }
+}

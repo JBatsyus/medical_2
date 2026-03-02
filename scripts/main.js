@@ -127,6 +127,14 @@ document.addEventListener("DOMContentLoaded", function () {
             nextEl: '.hero-mrt__arrow--next',
             prevEl: '.hero-mrt__arrow--prev',
         },
+        pagination: {
+            el: ".hero-mrt__pagination",
+            dynamicBullets: true,
+            clickable: true,
+            type: "bullets",
+            bulletClass: "swiper-pagination-bullet",
+            bulletActiveClass: "swiper-pagination-bullet-active",
+        },
     });
 
     // Инициализация бокового слайдера
@@ -136,6 +144,14 @@ document.addEventListener("DOMContentLoaded", function () {
         navigation: {
             nextEl: '.hero-mrt__side-arrow--next',
             prevEl: '.hero-mrt__side-arrow--prev',
+        },
+        pagination: {
+            el: ".hero-mrt__side-pagination",
+            dynamicBullets: true,
+            clickable: true,
+            type: "bullets",
+            bulletClass: "swiper-pagination-bullet",
+            bulletActiveClass: "swiper-pagination-bullet-active",
         },
     });
 
