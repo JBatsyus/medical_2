@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
- 
+
 
 
 
@@ -301,8 +301,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     spaceBetween: 12
                 },
                 768: {
-                    slidesPerView: 2.05,
-                    spaceBetween: 20
+                    slidesPerView: 2.005,
+                    spaceBetween: 16
                 },
                 992: {
                     slidesPerView: 2.1,
@@ -545,9 +545,9 @@ $(function () {
 });
 
 Fancybox.bind("[data-fancybox]", {
-    gestures: false,        // ← главное: отключает свайпы/закрытие жестами
-    dragToClose: false,     // ← запрещает закрывать свайпом вниз
-    hideScrollbar: false,   // 
+    gestures: false, // ← главное: отключает свайпы/закрытие жестами
+    dragToClose: false, // ← запрещает закрывать свайпом вниз
+    hideScrollbar: false, // 
     compact: false,
     idle: false,
     infinite: true,
@@ -559,6 +559,8 @@ Fancybox.bind("[data-fancybox]", {
         },
     },
     Images: {
-        Panzoom: { maxScale: 2 },
+        Panzoom: {
+            maxScale: 2
+        },
     },
 });
