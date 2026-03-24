@@ -81,6 +81,8 @@
     }
 
     &__card {
+        display: grid;
+        align-items: stretch;
         padding: 32px;
         border-radius: 40px;
         background-color: var(--gray_white);

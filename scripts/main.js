@@ -123,6 +123,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainSwiper = new Swiper('.hero-mrt__slider', {
         slidesPerView: 1,
         spaceBetween: 20,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true,
+        },
+        speed: 1000,
         navigation: {
             nextEl: '.hero-mrt__arrow--next',
             prevEl: '.hero-mrt__arrow--prev',
@@ -141,6 +146,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const sideSwiper = new Swiper('.hero-mrt__side-slider', {
         slidesPerView: 1,
         spaceBetween: 20,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true,
+        },
+        speed: 1000,
         navigation: {
             nextEl: '.hero-mrt__side-arrow--next',
             prevEl: '.hero-mrt__side-arrow--prev',

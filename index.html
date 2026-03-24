@@ -2072,6 +2072,26 @@
 
         });
     </script>
+    <!-- <script>
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        // Блокировка горячих клавиш
+        document.addEventListener('keydown', (e) => {
+            // Запрет F12
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+            // Запрет Ctrl+Shift+I, Ctrl+Shift+J (консоль), Ctrl+Shift+C (инспектор), Ctrl+U (исходный код)
+            if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C') || (e.ctrlKey && e
+                    .key === 'u')) {
+                e.preventDefault();
+            }
+            // Запрет Ctrl+S (сохранение страницы)
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+            }
+        });
+    </script> -->
 </body>
 
 </html>
